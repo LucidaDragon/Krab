@@ -556,7 +556,10 @@ namespace Lucida.Krab.Parsing
                                 {
                                     while (true)
                                     {
-                                        if (shuntingYard.Count == 0) throw new SourceError(token, "( expected.");
+                                        if (shuntingYard.Count == 0 || functionStack.Count == 0)
+                                        {
+                                            throw new SourceError(token, "( expected.");
+                                        }
 
                                         var op = shuntingYard.Pop();
 
@@ -674,6 +677,8 @@ namespace Lucida.Krab.Parsing
                     });
                 }
             }
+
+            if (evalStack.Count == 0) throw new SourceError(tokens.FirstOrDefault(), "Expression is empty.");
 
             if (evalStack.Count > 1)
             {
