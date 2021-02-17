@@ -1,7 +1,20 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard1.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>A light-weight modular C-like language parser and compiler.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/LucidaDragon/Krab</RepositoryUrl>
+    <PackageIcon>KrabLogo.png</PackageIcon>
+    <PackageProjectUrl>https://github.com/LucidaDragon/Krab</PackageProjectUrl>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="KrabLogo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
