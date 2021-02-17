@@ -8,6 +8,7 @@
     <RepositoryUrl>https://github.com/LucidaDragon/Krab</RepositoryUrl>
     <PackageIcon>KrabLogo.png</PackageIcon>
     <PackageProjectUrl>https://github.com/LucidaDragon/Krab</PackageProjectUrl>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
