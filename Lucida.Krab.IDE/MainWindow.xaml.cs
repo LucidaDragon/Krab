@@ -1,4 +1,5 @@
 ﻿using Lucida.Krab.Characters;
+using Lucida.Krab.Compiler;
 using Lucida.Krab.Parsing;
 using System;
 using System.Collections.Generic;
@@ -30,7 +31,11 @@ namespace Lucida.Krab.IDE
 
             try
             {
-                Output.Text = string.Join(Environment.NewLine, Parser.Parse(src));
+                var sequence = new Sequencer(Parser.Parse(src));
+
+                sequence.Resolve();
+
+                Output.Text = string.Join(Environment.NewLine, sequence.Members.Keys);
             }
             catch (SourceError error)
             {

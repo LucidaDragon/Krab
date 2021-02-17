@@ -5,9 +5,7 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lucida.Krab", "Lucida.Krab\Lucida.Krab.csproj", "{F2DBF6B2-436E-4087-AEB6-93D1DA7372B0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lucida.Krab.Compiler", "Lucida.Krab.Compiler\Lucida.Krab.Compiler.csproj", "{FB6C51FF-89BB-42FA-85B5-0AA1269F80B6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lucida.Krab.IDE", "Lucida.Krab.IDE\Lucida.Krab.IDE.csproj", "{E177DD1C-D4F9-459A-8A53-019265DAE266}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lucida.Krab.IDE", "Lucida.Krab.IDE\Lucida.Krab.IDE.csproj", "{E177DD1C-D4F9-459A-8A53-019265DAE266}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +17,6 @@ Global
 		{F2DBF6B2-436E-4087-AEB6-93D1DA7372B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2DBF6B2-436E-4087-AEB6-93D1DA7372B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2DBF6B2-436E-4087-AEB6-93D1DA7372B0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FB6C51FF-89BB-42FA-85B5-0AA1269F80B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FB6C51FF-89BB-42FA-85B5-0AA1269F80B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FB6C51FF-89BB-42FA-85B5-0AA1269F80B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FB6C51FF-89BB-42FA-85B5-0AA1269F80B6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E177DD1C-D4F9-459A-8A53-019265DAE266}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E177DD1C-D4F9-459A-8A53-019265DAE266}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E177DD1C-D4F9-459A-8A53-019265DAE266}.Release|Any CPU.ActiveCfg = Release|Any CPU

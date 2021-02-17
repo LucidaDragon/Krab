@@ -289,7 +289,7 @@ namespace Lucida.Krab.Parsing
                                 switch (token.Build())
                                 {
                                     case ")":
-                                        state = ParserState.Finished;
+                                        state = ParserState.Body;
                                         break;
                                     default:
                                         throw new SourceError(token, "Parameter type expected.");
