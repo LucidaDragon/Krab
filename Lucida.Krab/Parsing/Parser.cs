@@ -556,7 +556,7 @@ namespace Lucida.Krab.Parsing
                                 {
                                     while (true)
                                     {
-                                        if (shuntingYard.Count == 0 || functionStack.Count == 0)
+                                        if (shuntingYard.Count == 0)
                                         {
                                             throw new SourceError(token, "( expected.");
                                         }
@@ -565,12 +565,12 @@ namespace Lucida.Krab.Parsing
 
                                         if (op.Token.Build() == "(") break;
 
-                                        if (functionStack.Peek() == op) op = functionStack.Pop();
+                                        if (functionStack.Count > 0 && functionStack.Peek() == op) op = functionStack.Pop();
 
                                         postfix.Enqueue(op);
                                     }
 
-                                    if (shuntingYard.Peek().Token.Type == TokenType.Name)
+                                    if (shuntingYard.Count > 0 && shuntingYard.Peek().Token.Type == TokenType.Name)
                                     {
                                         var op = shuntingYard.Pop();
 

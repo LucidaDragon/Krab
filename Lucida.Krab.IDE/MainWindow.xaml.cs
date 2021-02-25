@@ -28,23 +28,29 @@ namespace Lucida.Krab.IDE
         private void Source_TextChanged(object sender, TextChangedEventArgs e)
         {
             var src = new StringSource("src", Source.Text);
+            string parseResult = null;
+            string sequenceResult = null;
+            string errorResult = null;
 
             try
             {
-                var sequence = new Sequencer(Parser.Parse(src));
+                var parsed = Parser.Parse(src);
+                parseResult = string.Join(Environment.NewLine, parsed);
 
+                var sequence = new Sequencer(parsed);
                 sequence.Resolve();
-
-                Output.Text = string.Join(Environment.NewLine, sequence.Members.Keys);
+                sequenceResult = string.Join(Environment.NewLine, sequence.Members.Keys);
             }
             catch (SourceError error)
             {
-                Output.Text = $"\"{error.ErrorSource}\" {error.Message}";
+                errorResult = $"\"{error.ErrorSource}\" {error.Message}";
             }
             catch (Exception ex)
             {
-                Output.Text = $"An error occured while compiling: {ex}";
+                errorResult = $"An error occured while compiling: {ex}";
             }
+
+            Output.Text = $"{parseResult}{Environment.NewLine}{sequenceResult}{Environment.NewLine}{errorResult}";
         }
     }
 }

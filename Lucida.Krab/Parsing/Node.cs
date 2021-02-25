@@ -25,7 +25,7 @@ namespace Lucida.Krab.Parsing
 
         public override string ToString()
         {
-            return $"{Type} {Name}{(Children.Count == 0 ? ";" : $"\n{{\n\t{string.Join("\n", Children).Replace("\n", "\n\t")}\n}}")}";
+            return Values.Build();
         }
     }
 
