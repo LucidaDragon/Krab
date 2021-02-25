@@ -26,7 +26,7 @@ namespace Lucida.Krab.Parsing
         private static readonly ICharacterSource Literal = new StringSource(InternalSource, LiteralKey);
         private static readonly ICharacterSource Call = new StringSource(InternalSource, CallKey);
 
-        private static readonly Dictionary<string, Operator> Operators = new Dictionary<string, Operator>
+        public static readonly Dictionary<string, Operator> Operators = new Dictionary<string, Operator>
         {
             { "?", new Operator(1, 2, false) },
             { ":", new Operator(1, 2, false) },
@@ -853,20 +853,6 @@ namespace Lucida.Krab.Parsing
             public override int GetHashCode()
             {
                 return base.GetHashCode();
-            }
-        }
-
-        private struct Operator
-        {
-            public int Precedence;
-            public int Arguments;
-            public bool LeftAssociative;
-
-            public Operator(int precedence, int arguments, bool leftAssociative)
-            {
-                Precedence = precedence;
-                Arguments = arguments;
-                LeftAssociative = leftAssociative;
             }
         }
 
